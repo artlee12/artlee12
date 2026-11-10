@@ -1,8 +1,8 @@
 <picture>
-  <source media="(max-width: 600px) and (prefers-reduced-motion: reduce)" srcset="./assets/profile-mobile-still.svg">
-  <source media="(prefers-reduced-motion: reduce)" srcset="./assets/profile-still.svg">
-  <source media="(max-width: 600px)" srcset="./assets/profile-mobile.svg">
-  <img width="100%" alt="@artlee12 · Аналитика данных и машинное обучение" src="./assets/profile.svg">
+  <source media="(max-width: 600px) and (prefers-reduced-motion: reduce)" srcset="./assets/dashboard-mobile-still.svg">
+  <source media="(prefers-reduced-motion: reduce)" srcset="./assets/dashboard-still.svg">
+  <source media="(max-width: 600px)" srcset="./assets/dashboard-mobile.svg">
+  <img width="100%" alt="@artlee12 · Стек, вклады за 31 день, серии активности и языки проектов" src="./assets/dashboard.svg">
 </picture>
 
 ## Проекты

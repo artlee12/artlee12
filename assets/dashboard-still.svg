@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="928" height="718" viewBox="0 0 928 718">
+  <title>@artlee12 · GitHub dashboard</title>
+  <desc>Стек, ежедневные вклады за 31 день, серии активности и языки двух проектов.</desc>
+  <style>
+    .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif }
+    .mono { font-family: ui-monospace, Consolas, 'Liberation Mono', monospace }
+  </style>
+  <defs>
+    <linearGradient id="paper" x2="1" y2=".28">
+      <stop stop-color="#f7effa"/><stop offset=".47" stop-color="#edf8f1"/><stop offset="1" stop-color="#f6f2fd"/>
+    </linearGradient>
+    <pattern id="grid" width="18" height="18" patternUnits="userSpaceOnUse">
+      <path d="M18 0H0V18" stroke="#fff" stroke-width="1.7" fill="none"/>
+    </pattern>
+    <clipPath id="frame"><rect width="928" height="718" rx="7"/></clipPath>
+  </defs>
+  <g clip-path="url(#frame)">
+    <rect x="0" y="0" width="928" height="718" fill="#fff" />
+    <rect x="0" y="0" width="928" height="194" fill="#f7f9f8" />
+    <rect x="0" y="0" width="551" height="194" fill="url(#paper)" />
+    <rect x="0" y="0" width="551" height="194" fill="url(#grid)" />
+    <path d="M551.5 0L551.5 194" stroke="#d1d9e0"/>
+    <path d="M0 43.5L928 43.5" stroke="#d1d9e0"/>
+    <rect x="30" y="17" width="9" height="9" fill="#45e36a" />
+    <text x="47" y="25" class="mono" font-size="13" fill="#495660" font-weight="600" text-anchor="start">github.profile</text>
+    <text x="898" y="25" class="mono" font-size="13" fill="#495660" font-weight="400" text-anchor="end">~/readme</text>
+    <text x="30" y="157" class="sans" font-size="22" fill="#495660" font-weight="400" text-anchor="start">Аналитика данных и машинное обучение</text>
+    <text x="30" y="177" class="mono" font-size="11" fill="#495660" font-weight="400" text-anchor="start">PYTHON / SQL</text>
+    <rect x="790" y="56" width="23" height="23" fill="#45e36a" class="tile" style="--delay:0.45s"/>
+    <rect x="836" y="56" width="23" height="23" fill="#f52780" class="tile" style="--delay:0.54s"/>
+    <rect x="859" y="56" width="23" height="23" fill="#258cf4" class="tile" style="--delay:0.58s"/>
+    <rect x="882" y="56" width="23" height="23" fill="#45e36a" class="tile" style="--delay:0.63s"/>
+    <rect x="744" y="79" width="23" height="23" fill="#fff" class="tile" style="--delay:0.40s"/>
+    <rect x="790" y="79" width="23" height="23" fill="#45e36a" class="tile" style="--delay:0.49s"/>
+    <rect x="813" y="79" width="23" height="23" fill="#b590fa" class="tile" style="--delay:0.54s"/>
+    <rect x="882" y="79" width="23" height="23" fill="#6434ef" class="tile" style="--delay:0.67s"/>
+    <rect x="905" y="79" width="23" height="23" fill="#45e36a" class="tile" style="--delay:0.72s"/>
+    <rect x="721" y="102" width="23" height="23" fill="#45e36a" class="tile" style="--delay:0.40s"/>
+    <rect x="790" y="102" width="23" height="23" fill="#b590fa" class="tile" style="--delay:0.54s"/>
+    <rect x="836" y="102" width="23" height="23" fill="#6434ef" class="tile" style="--delay:0.63s"/>
+    <rect x="859" y="102" width="23" height="23" fill="#45e36a" class="tile" style="--delay:0.67s"/>
+    <rect x="882" y="102" width="23" height="23" fill="#b590fa" class="tile" style="--delay:0.72s"/>
+    <rect x="675" y="125" width="23" height="23" fill="#b590fa" class="tile" style="--delay:0.36s"/>
+    <rect x="744" y="125" width="23" height="23" fill="#45e36a" class="tile" style="--delay:0.49s"/>
+    <rect x="813" y="125" width="23" height="23" fill="#f52780" class="tile" style="--delay:0.63s"/>
+    <rect x="905" y="125" width="23" height="23" fill="#258cf4" class="tile" style="--delay:0.81s"/>
+    <rect x="629" y="148" width="23" height="23" fill="#45e36a" class="tile" style="--delay:0.32s"/>
+    <rect x="698" y="148" width="23" height="23" fill="#fff" class="tile" style="--delay:0.45s"/>
+    <rect x="767" y="148" width="23" height="23" fill="#b590fa" class="tile" style="--delay:0.58s"/>
+    <rect x="790" y="148" width="23" height="23" fill="#6434ef" class="tile" style="--delay:0.63s"/>
+    <rect x="836" y="148" width="23" height="23" fill="#45e36a" class="tile" style="--delay:0.72s"/>
+    <rect x="859" y="148" width="23" height="23" fill="#258cf4" class="tile" style="--delay:0.77s"/>
+    <rect x="882" y="148" width="23" height="23" fill="#6434ef" class="tile" style="--delay:0.81s"/>
+    <rect x="905" y="148" width="23" height="23" fill="#b590fa" class="tile" style="--delay:0.85s"/>
+    <rect x="606" y="171" width="23" height="23" fill="#b590fa" class="tile" style="--delay:0.32s"/>
+    <rect x="721" y="171" width="23" height="23" fill="#45e36a" class="tile" style="--delay:0.54s"/>
+    <rect x="790" y="171" width="23" height="23" fill="#45e36a" class="tile" style="--delay:0.67s"/>
+    <rect x="836" y="171" width="23" height="23" fill="#f52780" class="tile" style="--delay:0.77s"/>
+    <rect x="905" y="171" width="23" height="23" fill="#45e36a" class="tile" style="--delay:0.90s"/>
+    <path fill="#1f2328" shape-rendering="crispEdges" d="M37 74h7v7h-7zM44 74h7v7h-7zM51 74h7v7h-7zM30 81h7v7h-7zM58 81h7v7h-7zM30 88h7v7h-7zM44 88h7v7h-7zM51 88h7v7h-7zM58 88h7v7h-7zM30 95h7v7h-7zM44 95h7v7h-7zM58 95h7v7h-7zM30 102h7v7h-7zM44 102h7v7h-7zM51 102h7v7h-7zM58 102h7v7h-7zM30 109h7v7h-7zM37 116h7v7h-7zM44 116h7v7h-7zM51 116h7v7h-7zM58 116h7v7h-7z"/>
+    <path fill="#1f2328" shape-rendering="crispEdges" d="M79 88h7v7h-7zM86 88h7v7h-7zM93 88h7v7h-7zM100 95h7v7h-7zM79 102h7v7h-7zM86 102h7v7h-7zM93 102h7v7h-7zM100 102h7v7h-7zM72 109h7v7h-7zM100 109h7v7h-7zM79 116h7v7h-7zM86 116h7v7h-7zM93 116h7v7h-7zM100 116h7v7h-7z"/>
+    <path fill="#1f2328" shape-rendering="crispEdges" d="M114 88h7v7h-7zM128 88h7v7h-7zM135 88h7v7h-7zM114 95h7v7h-7zM121 95h7v7h-7zM142 95h7v7h-7zM114 102h7v7h-7zM114 109h7v7h-7zM114 116h7v7h-7z"/>
+    <path fill="#1f2328" shape-rendering="crispEdges" d="M163 74h7v7h-7zM163 81h7v7h-7zM156 88h7v7h-7zM163 88h7v7h-7zM170 88h7v7h-7zM177 88h7v7h-7zM163 95h7v7h-7zM163 102h7v7h-7zM163 109h7v7h-7zM184 109h7v7h-7zM170 116h7v7h-7zM177 116h7v7h-7z"/>
+    <path fill="#1f2328" shape-rendering="crispEdges" d="M205 74h7v7h-7zM212 74h7v7h-7zM212 81h7v7h-7zM212 88h7v7h-7zM212 95h7v7h-7zM212 102h7v7h-7zM212 109h7v7h-7zM205 116h7v7h-7zM212 116h7v7h-7zM219 116h7v7h-7z"/>
+    <path fill="#1f2328" shape-rendering="crispEdges" d="M247 88h7v7h-7zM254 88h7v7h-7zM261 88h7v7h-7zM240 95h7v7h-7zM268 95h7v7h-7zM240 102h7v7h-7zM247 102h7v7h-7zM254 102h7v7h-7zM261 102h7v7h-7zM268 102h7v7h-7zM240 109h7v7h-7zM247 116h7v7h-7zM254 116h7v7h-7zM261 116h7v7h-7zM268 116h7v7h-7z"/>
+    <path fill="#1f2328" shape-rendering="crispEdges" d="M289 88h7v7h-7zM296 88h7v7h-7zM303 88h7v7h-7zM282 95h7v7h-7zM310 95h7v7h-7zM282 102h7v7h-7zM289 102h7v7h-7zM296 102h7v7h-7zM303 102h7v7h-7zM310 102h7v7h-7zM282 109h7v7h-7zM289 116h7v7h-7zM296 116h7v7h-7zM303 116h7v7h-7zM310 116h7v7h-7z"/>
+    <path fill="#1f2328" shape-rendering="crispEdges" d="M338 74h7v7h-7zM331 81h7v7h-7zM338 81h7v7h-7zM338 88h7v7h-7zM338 95h7v7h-7zM338 102h7v7h-7zM338 109h7v7h-7zM331 116h7v7h-7zM338 116h7v7h-7zM345 116h7v7h-7z"/>
+    <path fill="#1f2328" shape-rendering="crispEdges" d="M373 74h7v7h-7zM380 74h7v7h-7zM387 74h7v7h-7zM366 81h7v7h-7zM394 81h7v7h-7zM394 88h7v7h-7zM380 95h7v7h-7zM387 95h7v7h-7zM373 102h7v7h-7zM366 109h7v7h-7zM366 116h7v7h-7zM373 116h7v7h-7zM380 116h7v7h-7zM387 116h7v7h-7zM394 116h7v7h-7z"/>
+    <path d="M0 194.5L928 194.5" stroke="#d1d9e0"/>
+    <text x="30" y="222" class="mono" font-size="13" fill="#495660" font-weight="600" text-anchor="start">01 / СТЕК</text>
+    <rect x="30" y="237" width="102" height="30" fill="#fff" rx="4" stroke="#d1d9e0"/>
+    <path fill="#258cf4" shape-rendering="crispEdges" d="M40 247h2v2h-2zM42 247h2v2h-2zM44 247h2v2h-2zM40 249h2v2h-2zM38 251h2v2h-2zM40 251h2v2h-2zM42 251h2v2h-2zM44 251h2v2h-2zM46 251h2v2h-2zM44 253h2v2h-2zM40 255h2v2h-2zM42 255h2v2h-2zM44 255h2v2h-2z"/>
+    <text x="54" y="257" class="sans" font-size="12" fill="#1f2328" font-weight="550" text-anchor="start">Python</text>
+    <rect x="139" y="237" width="102" height="30" fill="#fff" rx="4" stroke="#d1d9e0"/>
+    <path fill="#6434ef" shape-rendering="crispEdges" d="M149 247h2v2h-2zM151 247h2v2h-2zM153 247h2v2h-2zM147 249h2v2h-2zM155 249h2v2h-2zM147 251h2v2h-2zM149 251h2v2h-2zM151 251h2v2h-2zM153 251h2v2h-2zM155 251h2v2h-2zM147 253h2v2h-2zM155 253h2v2h-2zM149 255h2v2h-2zM151 255h2v2h-2zM153 255h2v2h-2z"/>
+    <text x="163" y="257" class="sans" font-size="12" fill="#1f2328" font-weight="550" text-anchor="start">SQL</text>
+    <rect x="248" y="237" width="102" height="30" fill="#fff" rx="4" stroke="#d1d9e0"/>
+    <path fill="#bd5221" shape-rendering="crispEdges" d="M258 247h2v2h-2zM260 247h2v2h-2zM262 247h2v2h-2zM256 249h2v2h-2zM264 249h2v2h-2zM260 251h2v2h-2zM256 253h2v2h-2zM264 253h2v2h-2zM258 255h2v2h-2zM260 255h2v2h-2zM262 255h2v2h-2z"/>
+    <text x="272" y="257" class="sans" font-size="12" fill="#1f2328" font-weight="550" text-anchor="start">Jupyter</text>
+    <rect x="357" y="237" width="102" height="30" fill="#fff" rx="4" stroke="#d1d9e0"/>
+    <path fill="#c34432" shape-rendering="crispEdges" d="M369 247h2v2h-2zM367 249h2v2h-2zM369 249h2v2h-2zM371 249h2v2h-2zM365 251h2v2h-2zM367 251h2v2h-2zM371 251h2v2h-2zM373 251h2v2h-2zM365 253h2v2h-2zM373 253h2v2h-2zM367 255h2v2h-2zM369 255h2v2h-2zM371 255h2v2h-2z"/>
+    <text x="381" y="257" class="sans" font-size="12" fill="#1f2328" font-weight="550" text-anchor="start">PyTorch</text>
+    <rect x="466" y="237" width="102" height="30" fill="#fff" rx="4" stroke="#d1d9e0"/>
+    <path fill="#cf3866" shape-rendering="crispEdges" d="M474 247h2v2h-2zM480 247h2v2h-2zM474 249h2v2h-2zM476 249h2v2h-2zM480 249h2v2h-2zM482 249h2v2h-2zM476 251h2v2h-2zM478 251h2v2h-2zM478 253h2v2h-2zM480 253h2v2h-2zM474 255h2v2h-2zM480 255h2v2h-2z"/>
+    <text x="490" y="257" class="sans" font-size="12" fill="#1f2328" font-weight="550" text-anchor="start">Dask</text>
+    <rect x="575" y="237" width="102" height="30" fill="#fff" rx="4" stroke="#d1d9e0"/>
+    <path fill="#3967d5" shape-rendering="crispEdges" d="M583 247h2v2h-2zM585 247h2v2h-2zM587 247h2v2h-2zM589 247h2v2h-2zM583 249h2v2h-2zM591 249h2v2h-2zM583 251h2v2h-2zM585 251h2v2h-2zM587 251h2v2h-2zM589 251h2v2h-2zM583 253h2v2h-2zM583 255h2v2h-2z"/>
+    <text x="599" y="257" class="sans" font-size="12" fill="#1f2328" font-weight="550" text-anchor="start">Prefect</text>
+    <rect x="684" y="237" width="102" height="30" fill="#fff" rx="4" stroke="#d1d9e0"/>
+    <path fill="#315c94" shape-rendering="crispEdges" d="M694 247h2v2h-2zM696 247h2v2h-2zM698 247h2v2h-2zM692 249h2v2h-2zM696 249h2v2h-2zM700 249h2v2h-2zM692 251h2v2h-2zM694 251h2v2h-2zM696 251h2v2h-2zM698 251h2v2h-2zM700 251h2v2h-2zM696 253h2v2h-2zM698 253h2v2h-2zM694 255h2v2h-2zM696 255h2v2h-2z"/>
+    <text x="708" y="257" class="sans" font-size="12" fill="#1f2328" font-weight="550" text-anchor="start">PostgreSQL</text>
+    <rect x="793" y="237" width="102" height="30" fill="#fff" rx="4" stroke="#d1d9e0"/>
+    <path fill="#cf3866" shape-rendering="crispEdges" d="M809 247h2v2h-2zM807 249h2v2h-2zM809 249h2v2h-2zM801 251h2v2h-2zM803 251h2v2h-2zM805 251h2v2h-2zM807 251h2v2h-2zM809 251h2v2h-2zM803 253h2v2h-2zM805 253h2v2h-2zM807 253h2v2h-2zM805 255h2v2h-2z"/>
+    <text x="817" y="257" class="sans" font-size="12" fill="#1f2328" font-weight="550" text-anchor="start">Streamlit</text>
+    <path d="M0 285.5L928 285.5" stroke="#d1d9e0"/>
+    <text x="30" y="313" class="mono" font-size="13" fill="#495660" font-weight="600" text-anchor="start">02 / АКТИВНОСТЬ</text>
+    <text x="30" y="336" class="sans" font-size="17" fill="#1f2328" font-weight="600" text-anchor="start">Вклады за 31 день · 4</text>
+    <path d="M30 462.5L572 462.5" stroke="#d1d9e0"/>
+    <path d="M30 412.5L572 412.5" stroke="#d1d9e0"/>
+    <path d="M30 362.5L572 362.5" stroke="#d1d9e0"/>
+    <rect x="30" y="460" width="13" height="2" fill="#dce4dd" />
+    <rect x="47" y="460" width="14" height="2" fill="#dce4dd" />
+    <rect x="65" y="460" width="13" height="2" fill="#dce4dd" />
+    <rect x="82" y="460" width="14" height="2" fill="#dce4dd" />
+    <rect x="100" y="460" width="13" height="2" fill="#dce4dd" />
+    <rect x="117" y="460" width="14" height="2" fill="#dce4dd" />
+    <rect x="135" y="460" width="13" height="2" fill="#dce4dd" />
+    <rect x="152" y="460" width="14" height="2" fill="#dce4dd" />
+    <rect x="170" y="460" width="13" height="2" fill="#dce4dd" />
+    <rect x="187" y="460" width="14" height="2" fill="#dce4dd" />
+    <rect x="205" y="460" width="13" height="2" fill="#dce4dd" />
+    <rect x="222" y="460" width="14" height="2" fill="#dce4dd" />
+    <rect x="240" y="460" width="13" height="2" fill="#dce4dd" />
+    <rect x="257" y="460" width="14" height="2" fill="#dce4dd" />
+    <rect x="275" y="460" width="13" height="2" fill="#dce4dd" />
+    <rect x="292" y="460" width="14" height="2" fill="#dce4dd" />
+    <rect x="310" y="460" width="13" height="2" fill="#dce4dd" />
+    <rect x="327" y="460" width="14" height="2" fill="#dce4dd" />
+    <rect x="345" y="460" width="13" height="2" fill="#dce4dd" />
+    <rect x="362" y="460" width="14" height="2" fill="#dce4dd" />
+    <rect x="380" y="460" width="13" height="2" fill="#dce4dd" />
+    <rect x="397" y="460" width="14" height="2" fill="#dce4dd" />
+    <rect x="415" y="460" width="13" height="2" fill="#dce4dd" />
+    <rect x="432" y="460" width="14" height="2" fill="#dce4dd" />
+    <rect x="450" y="460" width="13" height="2" fill="#dce4dd" />
+    <rect x="467" y="460" width="14" height="2" fill="#dce4dd" />
+    <rect x="485" y="460" width="13" height="2" fill="#dce4dd" />
+    <rect x="502" y="460" width="14" height="2" fill="#dce4dd" />
+    <rect x="520" y="460" width="13" height="2" fill="#dce4dd" />
+    <rect x="537" y="460" width="14" height="2" fill="#dce4dd" />
+    <g class="bar" style="--delay:1.28s"><title>10.11: 4</title><rect x="555" y="362" width="13" height="100" fill="#6434ef" /><rect x="556" y="362" width="11" height="2" fill="#c8b7fc" /></g>
+    <text x="30" y="484" class="mono" font-size="12" fill="#495660" font-weight="400" text-anchor="start">11.10</text>
+    <text x="572" y="484" class="mono" font-size="12" fill="#495660" font-weight="400" text-anchor="end">10.11</text>
+    <path d="M601.5 285L601.5 503" stroke="#d1d9e0"/>
+    <text x="630" y="343" class="mono" font-size="29" fill="#1f2328" font-weight="700" text-anchor="start">13</text>
+    <text x="703" y="342" class="sans" font-size="14" fill="#495660" font-weight="400" text-anchor="start">вкладов за 365 дней</text>
+    <text x="630" y="398" class="mono" font-size="29" fill="#1f2328" font-weight="700" text-anchor="start">1</text>
+    <text x="703" y="397" class="sans" font-size="14" fill="#495660" font-weight="400" text-anchor="start">текущая серия, дн.</text>
+    <text x="630" y="453" class="mono" font-size="29" fill="#1f2328" font-weight="700" text-anchor="start">1</text>
+    <text x="703" y="452" class="sans" font-size="14" fill="#495660" font-weight="400" text-anchor="start">лучшая серия, дн.</text>
+    <path d="M0 503.5L928 503.5" stroke="#d1d9e0"/>
+    <text x="30" y="531" class="mono" font-size="13" fill="#495660" font-weight="600" text-anchor="start">03 / ЯЗЫКИ</text>
+    <text x="30" y="553" class="sans" font-size="14" fill="#495660" font-weight="400" text-anchor="start">По объёму файлов в двух проектах</text>
+    <text x="30" y="586" class="mono" font-size="13" fill="#1f2328" font-weight="400" text-anchor="start">Jupyter Notebook</text>
+    <rect x="180" y="576" width="650" height="10" fill="#eef1f3" />
+    <rect x="180" y="576" width="581" height="10" fill="#6434ef" class="meter" style="--delay:0.60s"/>
+    <text x="898" y="586" class="mono" font-size="13" fill="#1f2328" font-weight="400" text-anchor="end">89,4%</text>
+    <text x="30" y="610" class="mono" font-size="13" fill="#1f2328" font-weight="400" text-anchor="start">Python</text>
+    <rect x="180" y="600" width="650" height="10" fill="#eef1f3" />
+    <rect x="180" y="600" width="63" height="10" fill="#258cf4" class="meter" style="--delay:0.73s"/>
+    <text x="898" y="610" class="mono" font-size="13" fill="#1f2328" font-weight="400" text-anchor="end">9,6%</text>
+    <text x="30" y="634" class="mono" font-size="13" fill="#1f2328" font-weight="400" text-anchor="start">Shell</text>
+    <rect x="180" y="624" width="650" height="10" fill="#eef1f3" />
+    <rect x="180" y="624" width="5" height="10" fill="#28a957" class="meter" style="--delay:0.86s"/>
+    <text x="898" y="634" class="mono" font-size="13" fill="#1f2328" font-weight="400" text-anchor="end">0,8%</text>
+    <text x="30" y="658" class="mono" font-size="13" fill="#1f2328" font-weight="400" text-anchor="start">Dockerfile</text>
+    <rect x="180" y="648" width="650" height="10" fill="#eef1f3" />
+    <rect x="180" y="648" width="2" height="10" fill="#d72a75" class="meter" style="--delay:0.99s"/>
+    <text x="898" y="658" class="mono" font-size="13" fill="#1f2328" font-weight="400" text-anchor="end">0,2%</text>
+    <path d="M0 679.5L928 679.5" stroke="#d1d9e0"/>
+    <text x="30" y="703" class="mono" font-size="11" fill="#495660" font-weight="400" text-anchor="start">Источник · публичные данные GitHub</text>
+    <text x="898" y="703" class="mono" font-size="11" fill="#495660" font-weight="400" text-anchor="end">10.11.2026</text>
+  </g>
+  <rect x=".5" y=".5" width="927" height="717" rx="6.5" fill="none" stroke="#d1d9e0"/>
+</svg>
