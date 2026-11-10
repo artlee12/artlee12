@@ -9,6 +9,7 @@ on:
     paths:
       - .github/workflows/profile-dashboard.yml
       - scripts/profile_dashboard.py
+      - scripts/stack-icons.json
 
 permissions:
   contents: write

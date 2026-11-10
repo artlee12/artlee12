@@ -16,16 +16,7 @@ PROJECTS = ("biodata_project", "curs")
 INK, MUTED, LINE = "#1f2328", "#495660", "#d1d9e0"
 GREEN, PURPLE, BLUE, PINK = "#45e36a", "#6434ef", "#258cf4", "#f52780"
 LANGUAGE_COLORS = (PURPLE, BLUE, "#28a957", "#d72a75")
-STACK = (
-    ("Python", BLUE, ("01110", "01000", "11111", "00010", "01110")),
-    ("SQL", PURPLE, ("01110", "10001", "11111", "10001", "01110")),
-    ("Jupyter", "#bd5221", ("01110", "10001", "00100", "10001", "01110")),
-    ("PyTorch", "#c34432", ("00100", "01110", "11011", "10001", "01110")),
-    ("Dask", "#cf3866", ("10010", "11011", "01100", "00110", "10010")),
-    ("Prefect", "#3967d5", ("11110", "10001", "11110", "10000", "10000")),
-    ("PostgreSQL", "#315c94", ("01110", "10101", "11111", "00110", "01100")),
-    ("Streamlit", "#cf3866", ("00001", "00011", "11111", "01110", "00100")),
-)
+STACK = ("Python", "SQL", "Jupyter", "PyTorch", "Dask", "Prefect", "PostgreSQL", "Streamlit")
 PIXELS = {
     "@": ("01110", "10001", "10111", "10101", "10111", "10000", "01111"),
     "a": ("00000", "00000", "01110", "00001", "01111", "10001", "01111"),
@@ -148,6 +139,20 @@ def divider(x1, y1, x2, y2):
     return f'<path d="M{x1} {y1}L{x2} {y2}" stroke="{LINE}"/>'
 
 
+def stack_icon(name, x, y, icons):
+    if name == "SQL":
+        artwork = (
+            f'<g fill="none" stroke="{PURPLE}" stroke-width="2" stroke-linecap="round">'
+            '<ellipse cx="12" cy="5" rx="8" ry="3"/>'
+            '<path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/>'
+            "</g>"
+        )
+    else:
+        icon = icons[name]
+        artwork = f'<path fill="{escape(icon["color"])}" d="{escape(icon["path"])}"/>'
+    return f'<svg x="{x}" y="{y}" width="17" height="17" viewBox="0 0 24 24">{artwork}</svg>'
+
+
 def hero(w, compact):
     margin = 24 if compact else 30
     bottom = 194
@@ -166,12 +171,12 @@ def hero(w, compact):
     ]
     if compact:
         children.extend((
-            text(margin, 151, "Аналитика данных", 19, fill=MUTED),
-            text(margin, 174, "и машинное обучение", 19, fill=MUTED),
+            text(margin, 151, "Data analytics", 19, fill=MUTED),
+            text(margin, 174, "& machine learning", 19, fill=MUTED),
         ))
     else:
         children.extend((
-            text(margin, 157, "Аналитика данных и машинное обучение", 22, fill=MUTED),
+            text(margin, 157, "Data analytics & machine learning", 22, fill=MUTED),
             text(margin, 177, "PYTHON / SQL", 11, mono=True, fill=MUTED),
         ))
     origin = w - step * len(MOSAIC[0])
@@ -188,19 +193,19 @@ def hero(w, compact):
     return children
 
 
-def stack(w, compact, top, height):
+def stack(w, compact, top, height, icons):
     margin = 24 if compact else 30
     columns = 4 if compact else 8
     gap = 7
     chip_width = (w - margin * 2 - gap * (columns - 1)) // columns
-    children = [label(margin, top + 28, "01 / СТЕК")]
-    for i, (name, color, icon) in enumerate(STACK):
+    children = [label(margin, top + 28, "01 / TECH STACK")]
+    for i, name in enumerate(STACK):
         x = margin + (i % columns) * (chip_width + gap)
         y = top + 43 + (i // columns) * 36
         children.extend((
             rect(x, y, chip_width, 30, "#fff", f'rx="4" stroke="{LINE}"'),
-            glyph(icon, x + 8, y + 10, 2, color),
-            text(x + 24, y + 20, name, 11 if compact else 12, weight=550),
+            stack_icon(name, x + 8, y + 6.5, icons),
+            text(x + 31, y + 20, name, 11 if compact else 12, weight=550),
         ))
     children.append(divider(0, top + height + 0.5, w, top + height + 0.5))
     return children
@@ -217,12 +222,18 @@ def activity(w, compact, top, height, series):
     gap = 3 if compact else 4
     step = chart_width / len(recent)
     children = [
-        label(margin, top + 28, "02 / АКТИВНОСТЬ"),
-        text(margin, top + 51, f"Вклады за 31 день · {sum(count for _, count in recent)}", 17, weight=600),
+        label(margin, top + 28, "02 / ACTIVITY"),
+        text(margin, top + 51, f"Contributions in 31 days · {sum(count for _, count in recent)}", 17, weight=600),
     ]
     for level in (0, 0.5, 1):
         y = chart_bottom - chart_height * level
         children.append(divider(margin, y + .5, margin + chart_width, y + .5))
+    children.append(
+        f'<g class="scan" style="--travel:{chart_width - 23}px">'
+        + rect(margin, chart_bottom - chart_height - 2, 23, 4, "#dcf7e4")
+        + rect(margin + 17, chart_bottom - chart_height - 2, 6, 4, GREEN)
+        + "</g>"
+    )
     for i, (day, count) in enumerate(recent):
         x = round(margin + i * step)
         bar_width = max(2, round(margin + (i + 1) * step) - x - gap)
@@ -238,14 +249,14 @@ def activity(w, compact, top, height, series):
             + "</g>"
         )
     children.extend((
-        text(margin, chart_bottom + 22, f"{recent[0][0]:%d.%m}", 12, fill=MUTED, mono=True),
-        text(margin + chart_width, chart_bottom + 22, f"{recent[-1][0]:%d.%m}", 12, fill=MUTED, mono=True, anchor="end"),
+        text(margin, chart_bottom + 22, f"{recent[0][0]:%b %d}", 12, fill=MUTED, mono=True),
+        text(margin + chart_width, chart_bottom + 22, f"{recent[-1][0]:%b %d}", 12, fill=MUTED, mono=True, anchor="end"),
     ))
     current, best = streaks(counts)
     stats = (
-        (sum(counts), "вкладов за 365 дней"),
-        (current, "текущая серия, дн."),
-        (best, "лучшая серия, дн."),
+        (sum(counts), "contributions in 365 days"),
+        (current, "current streak, days"),
+        (best, "longest streak, days"),
     )
     if compact:
         stat_y = top + 188
@@ -265,12 +276,12 @@ def activity(w, compact, top, height, series):
 
 def language_panel(w, compact, top, counts):
     margin = 24 if compact else 30
-    children = [label(margin, top + 28, "03 / ЯЗЫКИ")]
-    children.append(text(margin, top + 50, "По объёму файлов в двух проектах", 14, fill=MUTED))
+    children = [label(margin, top + 28, "03 / LANGUAGES")]
+    children.append(text(margin, top + 50, "By bytes across two projects", 14, fill=MUTED))
     total = sum(counts.values())
     entries = counts.most_common()
     if len(entries) > 4:
-        entries = [*entries[:3], ("Другие", sum(count for _, count in entries[3:]))]
+        entries = [*entries[:3], ("Other", sum(count for _, count in entries[3:]))]
     track_x = margin + 150
     track_width = w - track_x - margin - 68
     for i, (language, count) in enumerate(entries):
@@ -281,26 +292,32 @@ def language_panel(w, compact, top, counts):
             rect(track_x, y, track_width, 10, "#eef1f3"),
             rect(track_x, y, max(2, round(track_width * ratio)), 10, LANGUAGE_COLORS[i],
                  f'class="meter" style="--delay:{0.6 + 0.13 * i:.2f}s"'),
-            text(w - margin, y + 10, f"{ratio:.1%}".replace(".", ","), 13, mono=True, anchor="end"),
+            text(w - margin, y + 10, f"{ratio:.1%}", 13, mono=True, anchor="end"),
         ))
     return children, top + 80 + len(entries) * 24
 
 
 MOTION = """
     @media (prefers-reduced-motion: no-preference) {
-      .tile { animation: assemble .76s steps(5, end) var(--delay) both }
+      .tile { animation: tile-wave 5.8s ease-in-out calc(0s - var(--delay)) infinite }
+      .scan { animation: scan 6.7s linear infinite }
       .bar { transform-box: fill-box; transform-origin: center bottom;
              animation: rise .72s steps(7, end) var(--delay) both }
       .meter { transform-box: fill-box; transform-origin: left center;
                animation: fill-meter .85s steps(10, end) var(--delay) both }
-      @keyframes assemble { from { opacity: .33 } to { opacity: 1 } }
+      @keyframes tile-wave { 0%, 100% { opacity: 1 } 50% { opacity: .64 } }
+      @keyframes scan {
+        0% { transform: translateX(0); opacity: 0 }
+        12%, 86% { opacity: .82 }
+        100% { transform: translateX(var(--travel)); opacity: 0 }
+      }
       @keyframes rise { from { transform: scaleY(.07) } to { transform: scaleY(1) } }
       @keyframes fill-meter { from { transform: scaleX(.06) } to { transform: scaleX(1) } }
     }
 """
 
 
-def render(series, languages, compact, animated):
+def render(series, languages, icons, compact, animated):
     w = 456 if compact else 928
     stack_height = 121 if compact else 91
     activity_height = 256 if compact else 218
@@ -311,20 +328,21 @@ def render(series, languages, compact, animated):
         rect(0, 0, w, height, "#fff"),
         *hero(w, compact),
         divider(0, 194.5, w, 194.5),
-        *stack(w, compact, 194, stack_height),
+        *stack(w, compact, 194, stack_height, icons),
         *activity(w, compact, 194 + stack_height, activity_height, series),
         *sections,
         divider(0, footer + .5, w, footer + .5),
-        text(margin, footer + 24, "Источник · публичные данные GitHub", 11, fill=MUTED, mono=True),
-        text(w - margin, footer + 24, f"{series[-1][0]:%d.%m.%Y}", 11, fill=MUTED, mono=True, anchor="end"),
+        text(margin, footer + 24, "Source · Public GitHub data", 11, fill=MUTED, mono=True),
+        text(w - margin, footer + 24, series[-1][0], 11, fill=MUTED, mono=True, anchor="end"),
     ]
     art = "\n".join("    " + item for item in children)
-    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{height}" viewBox="0 0 {w} {height}">
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" xml:lang="en" width="{w}" height="{height}" viewBox="0 0 {w} {height}">
   <title>@{USER} · GitHub dashboard</title>
-  <desc>Стек, ежедневные вклады за 31 день, серии активности и языки двух проектов.</desc>
+  <desc>Tech stack, daily contributions for 31 days, streaks, and languages used across two projects.</desc>
   <style>
     .sans {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif }}
     .mono {{ font-family: ui-monospace, Consolas, 'Liberation Mono', monospace }}
+    .scan {{ opacity: 0 }}
 {MOTION if animated else ""}  </style>
   <defs>
     <linearGradient id="paper" x2="1" y2=".28">
@@ -350,11 +368,12 @@ def main():
     series, languages = data()
     if not languages:
         raise ValueError("GitHub returned no language data for the selected projects.")
+    icons = json.loads(Path(__file__).with_name("stack-icons.json").read_text(encoding="utf-8"))["icons"]
     args.output.mkdir(parents=True, exist_ok=True)
     for compact, size in ((False, ""), (True, "-mobile")):
         for animated, motion in ((True, ""), (False, "-still")):
             target = args.output / f"dashboard{size}{motion}.svg"
-            target.write_text(render(series, languages, compact, animated), encoding="utf-8")
+            target.write_text(render(series, languages, icons, compact, animated), encoding="utf-8")
     counts = [count for _, count in series]
     print(f"Through {series[-1][0]}: {sum(counts[-31:])} in 31 days, {sum(counts)} in 365 days, streaks {streaks(counts)}.")
     print(f"Language bytes: {dict(languages.most_common())}")

@@ -1,22 +1,29 @@
+<details open>
+<summary>Animated dashboard</summary>
+
 <picture>
   <source media="(max-width: 600px) and (prefers-reduced-motion: reduce)" srcset="./assets/dashboard-mobile-still.svg">
   <source media="(prefers-reduced-motion: reduce)" srcset="./assets/dashboard-still.svg">
   <source media="(max-width: 600px)" srcset="./assets/dashboard-mobile.svg">
-  <img width="100%" alt="@artlee12 · Стек, вклады за 31 день, серии активности и языки проектов" src="./assets/dashboard.svg">
+  <img width="100%" alt="@artlee12 · Tech stack, 31 days of GitHub activity, contribution streaks, and project languages" src="./assets/dashboard.svg">
 </picture>
 
-## Проекты
+</details>
 
-### 01 · [Аналитика онлайн-ритейла](https://github.com/artlee12/biodata_project)
+[View without animation](./assets/dashboard-still.svg)
 
-ETL-пайплайн обрабатывает данные о продажах, собирает витрины по клиентам и дням и показывает метрики в дашборде Streamlit.
+## Projects
+
+### 01 · [Online retail analytics](https://github.com/artlee12/biodata_project)
+
+An ETL pipeline processes sales data, builds customer and daily sales summaries, and visualizes key metrics in Streamlit.
 
 `Dask` · `Prefect` · `PostgreSQL` · `Streamlit` · `Docker Compose`
 
-[Инструкция по запуску ↗](https://github.com/artlee12/biodata_project/blob/main/GUIDE.md)
+[Setup guide (Russian)](https://github.com/artlee12/biodata_project/blob/main/GUIDE.md)
 
-### 02 · Классификация новостей
+### 02 · News topic classification
 
-Сравнение TF-IDF с логистической регрессией, CNN, DistilBERT и стекинга для определения темы новости. Подготовка данных, обучение и оценка собраны в Jupyter-ноутбуке.
+Compared TF-IDF with logistic regression, a CNN, DistilBERT, and a stacking ensemble to classify news articles by topic. A Jupyter notebook contains data preparation, training, and evaluation.
 
 `scikit-learn` · `PyTorch` · `Transformers` · `Optuna`
