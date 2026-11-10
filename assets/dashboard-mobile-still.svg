@@ -7,9 +7,13 @@
     .scan { opacity: 0 }
   </style>
   <defs>
-    <linearGradient id="paper" x2="1" y2=".28">
-      <stop stop-color="#f7effa"/><stop offset=".47" stop-color="#edf8f1"/><stop offset="1" stop-color="#f6f2fd"/>
+    <linearGradient id="paper" x1="0" y1=".1" x2="1" y2=".9">
+      <stop stop-color="#f8e9fc"/><stop offset=".48" stop-color="#f5f2fd"/><stop offset="1" stop-color="#eaf0ff"/>
     </linearGradient>
+    <radialGradient id="paper-glow" cx=".48" cy=".38" r=".69">
+      <stop stop-color="#d9f6e7"/><stop offset=".44" stop-color="#e7faef" stop-opacity=".86"/>
+      <stop offset="1" stop-color="#edf7ff" stop-opacity="0"/>
+    </radialGradient>
     <pattern id="grid" width="18" height="18" patternUnits="userSpaceOnUse">
       <path d="M18 0H0V18" stroke="#fff" stroke-width="1.7" fill="none"/>
     </pattern>
@@ -19,6 +23,7 @@
     <rect x="0" y="0" width="456" height="786" fill="#fff" />
     <rect x="0" y="0" width="456" height="194" fill="#f7f9f8" />
     <rect x="0" y="0" width="308" height="194" fill="url(#paper)" />
+    <rect x="0" y="0" width="308" height="194" fill="url(#paper-glow)" class="paper-glow" opacity=".76"/>
     <rect x="0" y="0" width="308" height="194" fill="url(#grid)" />
     <path d="M308.5 0L308.5 194" stroke="#d1d9e0"/>
     <path d="M0 43.5L456 43.5" stroke="#d1d9e0"/>
@@ -27,33 +32,33 @@
     <text x="432" y="25" class="mono" font-size="13" fill="#495660" font-weight="400" text-anchor="end">~/readme</text>
     <text x="24" y="151" class="sans" font-size="19" fill="#495660" font-weight="400" text-anchor="start">Data analytics</text>
     <text x="24" y="174" class="sans" font-size="19" fill="#495660" font-weight="400" text-anchor="start">&amp; machine learning</text>
-    <rect x="361" y="61" width="19" height="19" fill="#45e36a" class="tile" style="--delay:0.45s"/>
-    <rect x="399" y="61" width="19" height="19" fill="#6434ef" class="tile" style="--delay:0.54s"/>
-    <rect x="418" y="61" width="19" height="19" fill="#f52780" class="tile" style="--delay:0.58s"/>
-    <rect x="437" y="61" width="19" height="19" fill="#b590fa" class="tile" style="--delay:0.63s"/>
-    <rect x="342" y="80" width="19" height="19" fill="#45e36a" class="tile" style="--delay:0.45s"/>
-    <rect x="380" y="80" width="19" height="19" fill="#f52780" class="tile" style="--delay:0.54s"/>
-    <rect x="399" y="80" width="19" height="19" fill="#258cf4" class="tile" style="--delay:0.58s"/>
-    <rect x="418" y="80" width="19" height="19" fill="#45e36a" class="tile" style="--delay:0.63s"/>
-    <rect x="342" y="99" width="19" height="19" fill="#45e36a" class="tile" style="--delay:0.49s"/>
-    <rect x="361" y="99" width="19" height="19" fill="#b590fa" class="tile" style="--delay:0.54s"/>
-    <rect x="418" y="99" width="19" height="19" fill="#6434ef" class="tile" style="--delay:0.67s"/>
-    <rect x="437" y="99" width="19" height="19" fill="#45e36a" class="tile" style="--delay:0.72s"/>
-    <rect x="342" y="118" width="19" height="19" fill="#b590fa" class="tile" style="--delay:0.54s"/>
-    <rect x="380" y="118" width="19" height="19" fill="#6434ef" class="tile" style="--delay:0.63s"/>
-    <rect x="399" y="118" width="19" height="19" fill="#45e36a" class="tile" style="--delay:0.67s"/>
-    <rect x="418" y="118" width="19" height="19" fill="#b590fa" class="tile" style="--delay:0.72s"/>
-    <rect x="361" y="137" width="19" height="19" fill="#f52780" class="tile" style="--delay:0.63s"/>
-    <rect x="437" y="137" width="19" height="19" fill="#258cf4" class="tile" style="--delay:0.81s"/>
-    <rect x="323" y="156" width="19" height="19" fill="#b590fa" class="tile" style="--delay:0.58s"/>
-    <rect x="342" y="156" width="19" height="19" fill="#6434ef" class="tile" style="--delay:0.63s"/>
-    <rect x="380" y="156" width="19" height="19" fill="#45e36a" class="tile" style="--delay:0.72s"/>
-    <rect x="399" y="156" width="19" height="19" fill="#258cf4" class="tile" style="--delay:0.77s"/>
-    <rect x="418" y="156" width="19" height="19" fill="#6434ef" class="tile" style="--delay:0.81s"/>
-    <rect x="437" y="156" width="19" height="19" fill="#b590fa" class="tile" style="--delay:0.85s"/>
-    <rect x="342" y="175" width="19" height="19" fill="#45e36a" class="tile" style="--delay:0.67s"/>
-    <rect x="380" y="175" width="19" height="19" fill="#f52780" class="tile" style="--delay:0.77s"/>
-    <rect x="437" y="175" width="19" height="19" fill="#45e36a" class="tile" style="--delay:0.90s"/>
+    <rect x="361" y="61" width="19" height="19" fill="#45e36a" class="tile" style="--entry:0.07s;--wave:1.14s"/>
+    <rect x="399" y="61" width="19" height="19" fill="#6434ef" class="tile" style="--entry:0.14s;--wave:2.28s"/>
+    <rect x="418" y="61" width="19" height="19" fill="#f52780" class="tile" style="--entry:0.18s;--wave:2.85s"/>
+    <rect x="437" y="61" width="19" height="19" fill="#b590fa" class="tile" style="--entry:0.22s;--wave:3.42s"/>
+    <rect x="342" y="80" width="19" height="19" fill="#45e36a" class="tile" style="--entry:0.08s;--wave:0.89s"/>
+    <rect x="380" y="80" width="19" height="19" fill="#f52780" class="tile" style="--entry:0.15s;--wave:2.03s"/>
+    <rect x="399" y="80" width="19" height="19" fill="#258cf4" class="tile" style="--entry:0.18s;--wave:2.60s"/>
+    <rect x="418" y="80" width="19" height="19" fill="#45e36a" class="tile" style="--entry:0.22s;--wave:3.17s"/>
+    <rect x="342" y="99" width="19" height="19" fill="#45e36a" class="tile" style="--entry:0.12s;--wave:1.21s"/>
+    <rect x="361" y="99" width="19" height="19" fill="#b590fa" class="tile" style="--entry:0.15s;--wave:1.78s"/>
+    <rect x="418" y="99" width="19" height="19" fill="#6434ef" class="tile" style="--entry:0.26s;--wave:3.49s"/>
+    <rect x="437" y="99" width="19" height="19" fill="#45e36a" class="tile" style="--entry:0.30s;--wave:4.06s"/>
+    <rect x="342" y="118" width="19" height="19" fill="#b590fa" class="tile" style="--entry:0.16s;--wave:1.53s"/>
+    <rect x="380" y="118" width="19" height="19" fill="#6434ef" class="tile" style="--entry:0.23s;--wave:2.67s"/>
+    <rect x="399" y="118" width="19" height="19" fill="#45e36a" class="tile" style="--entry:0.27s;--wave:3.24s"/>
+    <rect x="418" y="118" width="19" height="19" fill="#b590fa" class="tile" style="--entry:0.30s;--wave:3.81s"/>
+    <rect x="361" y="137" width="19" height="19" fill="#f52780" class="tile" style="--entry:0.24s;--wave:2.42s"/>
+    <rect x="437" y="137" width="19" height="19" fill="#258cf4" class="tile" style="--entry:0.38s;--wave:4.70s"/>
+    <rect x="323" y="156" width="19" height="19" fill="#b590fa" class="tile" style="--entry:0.21s;--wave:1.60s"/>
+    <rect x="342" y="156" width="19" height="19" fill="#6434ef" class="tile" style="--entry:0.24s;--wave:2.17s"/>
+    <rect x="380" y="156" width="19" height="19" fill="#45e36a" class="tile" style="--entry:0.31s;--wave:3.31s"/>
+    <rect x="399" y="156" width="19" height="19" fill="#258cf4" class="tile" style="--entry:0.35s;--wave:3.88s"/>
+    <rect x="418" y="156" width="19" height="19" fill="#6434ef" class="tile" style="--entry:0.39s;--wave:4.45s"/>
+    <rect x="437" y="156" width="19" height="19" fill="#b590fa" class="tile" style="--entry:0.42s;--wave:5.02s"/>
+    <rect x="342" y="175" width="19" height="19" fill="#45e36a" class="tile" style="--entry:0.28s;--wave:2.49s"/>
+    <rect x="380" y="175" width="19" height="19" fill="#f52780" class="tile" style="--entry:0.35s;--wave:3.63s"/>
+    <rect x="437" y="175" width="19" height="19" fill="#45e36a" class="tile" style="--entry:0.46s;--wave:5.34s"/>
     <path fill="#1f2328" shape-rendering="crispEdges" d="M29 74h5v5h-5zM34 74h5v5h-5zM39 74h5v5h-5zM24 79h5v5h-5zM44 79h5v5h-5zM24 84h5v5h-5zM34 84h5v5h-5zM39 84h5v5h-5zM44 84h5v5h-5zM24 89h5v5h-5zM34 89h5v5h-5zM44 89h5v5h-5zM24 94h5v5h-5zM34 94h5v5h-5zM39 94h5v5h-5zM44 94h5v5h-5zM24 99h5v5h-5zM29 104h5v5h-5zM34 104h5v5h-5zM39 104h5v5h-5zM44 104h5v5h-5z"/>
     <path fill="#1f2328" shape-rendering="crispEdges" d="M59 84h5v5h-5zM64 84h5v5h-5zM69 84h5v5h-5zM74 89h5v5h-5zM59 94h5v5h-5zM64 94h5v5h-5zM69 94h5v5h-5zM74 94h5v5h-5zM54 99h5v5h-5zM74 99h5v5h-5zM59 104h5v5h-5zM64 104h5v5h-5zM69 104h5v5h-5zM74 104h5v5h-5z"/>
     <path fill="#1f2328" shape-rendering="crispEdges" d="M84 84h5v5h-5zM94 84h5v5h-5zM99 84h5v5h-5zM84 89h5v5h-5zM89 89h5v5h-5zM104 89h5v5h-5zM84 94h5v5h-5zM84 99h5v5h-5zM84 104h5v5h-5z"/>

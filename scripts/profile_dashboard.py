@@ -162,6 +162,7 @@ def hero(w, compact):
     children = [
         rect(0, 0, w, bottom, "#f7f9f8"),
         rect(0, 0, split, bottom, "url(#paper)"),
+        rect(0, 0, split, bottom, "url(#paper-glow)", 'class="paper-glow" opacity=".76"'),
         rect(0, 0, split, bottom, "url(#grid)"),
         divider(split + 0.5, 0, split + 0.5, bottom),
         divider(0, 43.5, w, 43.5),
@@ -180,14 +181,18 @@ def hero(w, compact):
             text(margin, 177, "PYTHON / SQL", 11, mono=True, fill=MUTED),
         ))
     origin = w - step * len(MOSAIC[0])
+    first_column = max(0, (split + step - origin) // step)
     for row, line in enumerate(MOSAIC):
         for col, tile in enumerate(line):
             x = origin + col * step
             if tile in TILES and x >= split + 1:
                 y = bottom - (len(MOSAIC) - row) * step
                 if y >= 44:
-                    delay = 0.045 * (col + row)
-                    children.append(rect(x, y, step, step, TILES[tile], f'class="tile" style="--delay:{delay:.2f}s"'))
+                    column = col - first_column
+                    entry = 0.036 * column + 0.041 * row
+                    wave = 0.57 * column + 0.32 * row
+                    timing = f'--entry:{entry:.2f}s;--wave:{wave:.2f}s'
+                    children.append(rect(x, y, step, step, TILES[tile], f'class="tile" style="{timing}"'))
     for i, char in enumerate("@" + USER):
         children.append(glyph(PIXELS[char], margin + i * unit * 6, 74, unit, INK))
     return children
@@ -299,13 +304,17 @@ def language_panel(w, compact, top, counts):
 
 MOTION = """
     @media (prefers-reduced-motion: no-preference) {
-      .tile { animation: tile-wave 5.8s ease-in-out calc(0s - var(--delay)) infinite }
+      .tile { animation: tile-load .44s cubic-bezier(.2, 0, 0, 1) var(--entry) both,
+                         tile-wave 14s ease-in-out calc(0s - var(--wave)) infinite }
+      .paper-glow { animation: paper-shift 22s ease-in-out infinite }
       .scan { animation: scan 6.7s linear infinite }
       .bar { transform-box: fill-box; transform-origin: center bottom;
              animation: rise .72s steps(7, end) var(--delay) both }
       .meter { transform-box: fill-box; transform-origin: left center;
                animation: fill-meter .85s steps(10, end) var(--delay) both }
-      @keyframes tile-wave { 0%, 100% { opacity: 1 } 50% { opacity: .64 } }
+      @keyframes tile-load { from { fill-opacity: .15 } to { fill-opacity: 1 } }
+      @keyframes tile-wave { 0%, 100% { opacity: 1 } 50% { opacity: .66 } }
+      @keyframes paper-shift { 0%, 100% { opacity: .76 } 50% { opacity: 1 } }
       @keyframes scan {
         0% { transform: translateX(0); opacity: 0 }
         12%, 86% { opacity: .82 }
@@ -345,9 +354,13 @@ def render(series, languages, icons, compact, animated):
     .scan {{ opacity: 0 }}
 {MOTION if animated else ""}  </style>
   <defs>
-    <linearGradient id="paper" x2="1" y2=".28">
-      <stop stop-color="#f7effa"/><stop offset=".47" stop-color="#edf8f1"/><stop offset="1" stop-color="#f6f2fd"/>
+    <linearGradient id="paper" x1="0" y1=".1" x2="1" y2=".9">
+      <stop stop-color="#f8e9fc"/><stop offset=".48" stop-color="#f5f2fd"/><stop offset="1" stop-color="#eaf0ff"/>
     </linearGradient>
+    <radialGradient id="paper-glow" cx=".48" cy=".38" r=".69">
+      <stop stop-color="#d9f6e7"/><stop offset=".44" stop-color="#e7faef" stop-opacity=".86"/>
+      <stop offset="1" stop-color="#edf7ff" stop-opacity="0"/>
+    </radialGradient>
     <pattern id="grid" width="18" height="18" patternUnits="userSpaceOnUse">
       <path d="M18 0H0V18" stroke="#fff" stroke-width="1.7" fill="none"/>
     </pattern>
