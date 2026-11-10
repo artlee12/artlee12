@@ -1,23 +1,22 @@
-# @artlee12
+<picture>
+  <source media="(max-width: 600px) and (prefers-reduced-motion: reduce)" srcset="./assets/profile-mobile-still.svg">
+  <source media="(prefers-reduced-motion: reduce)" srcset="./assets/profile-still.svg">
+  <source media="(max-width: 600px)" srcset="./assets/profile-mobile.svg">
+  <img width="100%" alt="@artlee12 · Аналитика данных и машинное обучение" src="./assets/profile.svg">
+</picture>
 
-**Аналитика данных · Машинное обучение**
+## Проекты
 
-Работаю с данными на Python и SQL. В моих проектах есть исследовательский анализ, ETL, интерактивные дашборды и эксперименты с моделями машинного обучения.
+### 01 · [Аналитика онлайн-ритейла](https://github.com/artlee12/biodata_project)
 
-## Избранные проекты
-
-### [Аналитика онлайн-ритейла](https://github.com/artlee12/biodata_project)
-
-Пайплайн обрабатывает данные о продажах, формирует витрины по клиентам и ежедневным продажам и показывает метрики в дашборде Streamlit.
+ETL-пайплайн обрабатывает данные о продажах, собирает витрины по клиентам и дням и показывает метрики в дашборде Streamlit.
 
 `Dask` · `Prefect` · `PostgreSQL` · `Streamlit` · `Docker Compose`
 
-[Инструкция по запуску](https://github.com/artlee12/biodata_project/blob/main/GUIDE.md)
+[Инструкция по запуску ↗](https://github.com/artlee12/biodata_project/blob/main/GUIDE.md)
 
-### [Классификация новостей по темам](https://github.com/artlee12/curs)
+### 02 · Классификация новостей
 
-Сравнил TF-IDF с логистической регрессией, CNN, DistilBERT и стекинг. Подготовка данных, обучение и оценка моделей собраны в одном ноутбуке.
+Сравнение TF-IDF с логистической регрессией, CNN, DistilBERT и стекинга для определения темы новости. Подготовка данных, обучение и оценка собраны в Jupyter-ноутбуке.
 
-`Python` · `scikit-learn` · `PyTorch` · `Transformers` · `Optuna`
-
-[Ноутбук с экспериментами](https://github.com/artlee12/curs/blob/main/00_full_coursework_pipeline.ipynb)
+`scikit-learn` · `PyTorch` · `Transformers` · `Optuna`
