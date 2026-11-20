@@ -142,9 +142,9 @@
     <rect x="248" y="468" width="10" height="2" fill="#dce4dd" />
     <rect x="261" y="468" width="10" height="2" fill="#dce4dd" />
     <rect x="274" y="468" width="10" height="2" fill="#dce4dd" />
-    <rect x="287" y="468" width="10" height="2" fill="#dce4dd" />
-    <g class="bar" style="--delay:0.95s"><title>10.11: 5</title><rect x="300" y="381" width="11" height="89" fill="#6434ef" /><rect x="301" y="381" width="9" height="2" fill="#c8b7fc" /></g>
-    <g class="bar" style="--delay:0.98s"><title>11.11: 2</title><rect x="314" y="434" width="10" height="36" fill="#38b96a" /><rect x="315" y="434" width="8" height="2" fill="#b5f1c5" /></g>
+    <g class="bar" style="--delay:0.91s"><title>10.11: 5</title><rect x="287" y="381" width="10" height="89" fill="#6434ef" /><rect x="288" y="381" width="8" height="2" fill="#c8b7fc" /></g>
+    <g class="bar" style="--delay:0.95s"><title>11.11: 2</title><rect x="300" y="434" width="11" height="36" fill="#38b96a" /><rect x="301" y="434" width="9" height="2" fill="#b5f1c5" /></g>
+    <rect x="314" y="468" width="10" height="2" fill="#dce4dd" />
     <rect x="327" y="468" width="10" height="2" fill="#dce4dd" />
     <rect x="340" y="468" width="10" height="2" fill="#dce4dd" />
     <rect x="353" y="468" width="10" height="2" fill="#dce4dd" />
@@ -153,8 +153,8 @@
     <rect x="393" y="468" width="10" height="2" fill="#dce4dd" />
     <rect x="406" y="468" width="10" height="2" fill="#dce4dd" />
     <rect x="419" y="468" width="10" height="2" fill="#dce4dd" />
-    <text x="24" y="492" class="mono" font-size="12" fill="#495660" font-weight="400" text-anchor="start">Oct 20</text>
-    <text x="432" y="492" class="mono" font-size="12" fill="#495660" font-weight="400" text-anchor="end">Nov 19</text>
+    <text x="24" y="492" class="mono" font-size="12" fill="#495660" font-weight="400" text-anchor="start">Oct 21</text>
+    <text x="432" y="492" class="mono" font-size="12" fill="#495660" font-weight="400" text-anchor="end">Nov 20</text>
     <path d="M0 503.5L456 503.5" stroke="#d1d9e0"/>
     <text x="24" y="537" class="mono" font-size="24" fill="#1f2328" font-weight="700" text-anchor="start">11</text>
     <text x="24" y="555" class="sans" font-size="11" fill="#495660" font-weight="400" text-anchor="start">contributions in 365 days</text>
@@ -183,7 +183,7 @@
     <text x="432" y="726" class="mono" font-size="13" fill="#1f2328" font-weight="400" text-anchor="end">0.2%</text>
     <path d="M0 747.5L456 747.5" stroke="#d1d9e0"/>
     <text x="24" y="771" class="mono" font-size="11" fill="#495660" font-weight="400" text-anchor="start">Source · Public GitHub data</text>
-    <text x="432" y="771" class="mono" font-size="11" fill="#495660" font-weight="400" text-anchor="end">2026-11-19</text>
+    <text x="432" y="771" class="mono" font-size="11" fill="#495660" font-weight="400" text-anchor="end">2026-11-20</text>
   </g>
   <rect x=".5" y=".5" width="455" height="785" rx="6.5" fill="none" stroke="#d1d9e0"/>
 </svg>
